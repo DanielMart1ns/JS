@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aonde você mora?</title>
+
+    <style>
+
+        body
+        {
+            font: normal 15pt arial;
+        }
+
+        input
+        {
+            display: block;
+            margin-bottom: 5px;
+            width: 200px;
+            height: 25px;
+            font: normal 10pt arial;
+        }
+
+        input#botão
+        {
+            width: 208px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sou estrangeiro?</h1>
+    <input type="text" name="txtpais_atual" id="txtpais_atual" placeholder="Nome do País em que vive"> 
+    <input type="text" name="txtpais_natal" id="txtpais_natal" placeholder="Nome do pais de nasc.">
+    <input type="button" value="Verificar" onclick="verif()" id="botão">
+
+    <div id="resultado">
+        <p>Resultado</p> 
+    </div>
+
+    <script>
+
+        function verif()
+        {
+            var pais_atual = document.querySelector('input#txtpais_atual')
+            var pais_natal = document.querySelector('input#txtpais_natal')
+            var result = document.querySelector('div#resultado')
+            
+            if ((pais_atual.value) == (pais_natal.value))
+            {
+                result.innerHTML = 'Você não é estrangeiro'
+            }
+
+            else
+            {
+                result.innerHTML = 'Você é estrangeiro'
+            }
+        }
+    </script>
+
+</body>
+</html>
