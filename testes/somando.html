@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+</head>
+<body>
+    <input type="number" id="n1"> +
+    <input type="number" id="n2">
+    <input type="button" value="Somar" id="verif">
+
+    <div id="show">
+        Resultado
+    </div>
+
+    <script>
+        var verificacao = document.querySelector('input#verif')
+        verificacao.addEventListener('click', conferir)
+
+        
+
+        function conferir(){
+            var n1 = document.getElementById('n1')
+            var n2 = document.getElementById('n2')
+            var soma
+            var show = document.getElementById('show')
+
+            n1 = Number(n1.value)
+            n2 = Number(n2.value)
+            soma = n1 + n2
+
+            show.innerHTML = `O resultado é <strong>${soma}</strong>`
+        }
+    </script>
+</body>
+</html>

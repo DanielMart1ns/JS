@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistemas de Multas</h1>
+    <p>
+        Velocidade do Carro 
+        <input type="number" id="vel"> 
+        Km/h
+        <br>
+        <input type="button" value="Verificar" id="verif">
+    </p>
+    <div id="show">Resultado</div>
+
+    <script>
+        var verif = document.querySelector('input#verif')
+        verif.addEventListener('click', verificar)
+
+        function verificar()
+        {
+            var vel = document.querySelector('input#vel')
+            vel = Number(vel.value)
+
+            var resultado = document.querySelector('div#show')
+
+            if(vel > 50){
+                resultado.innerHTML = `Sua velocidade foi de ${vel} Km/h`
+                resultado.innerHTML += `<p><strong>Multado</strong></p>`
+            }
+            else{
+                resultado.innerHTML = `Sua velocidade foi ${vel} Km/h`
+                resultado.innerHTML += `<p><strong>Tudo certo</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>

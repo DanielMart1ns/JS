@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aonde você mora?</title>
+</head>
+<body>
+    <h1>Aonde você mora?</h1>
+    <p>Insira o país aonde você nasceu:</p>
+    <input type="text" id="nascimento">
+
+    <p>Insira o país onde você está no momento:</p>
+    <input type="text" id="pais_atual">
+    <br>
+
+    <input style="margin-top: 10px;" type="button" value="Verificar" id="verif">
+
+    <p id="show">
+        Você é estrangeiro ou não?
+    </p>
+
+    <script>
+        var verificar = document.querySelector('input#verif')
+        verificar.addEventListener('click', conferir)
+
+        function conferir(){
+            var pais_natal = document.getElementById('nascimento')
+            var pais_atual = document.getElementById('pais_atual')
+            var resultado = document.getElementById('show')
+
+            if(pais_natal != pais_atual){
+                resultado.innerText = 'Você é estrangeiro'
+            }
+            else{
+                resultado.innerText = 'Você não é estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
