@@ -20,13 +20,29 @@ section{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.386);
 }
 
-#msg{
-    text-align: center;
+#dados > form{
+    display: flex;
+    justify-content: space-between;
 }
 
-#foto{
+#numero_entrada{
+    transform: translateY(30%);
+}
+
+#verif{
+    width: 150px;
+    height: 30px;
+    margin-bottom: 4px;
+}
+
+#reset{
+    width: 150px;
+    height: 30px;
+}
+
+#show{
     margin-top: 10px;
-    text-align: center;
+    
 }
 
 footer{
